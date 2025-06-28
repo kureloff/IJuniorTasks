@@ -589,7 +589,8 @@ GameObject:
   - component: {fileID: 1265913749}
   - component: {fileID: 1265913752}
   - component: {fileID: 1265913751}
-  - component: {fileID: 1265913750}
+  - component: {fileID: 1265913754}
+  - component: {fileID: 1265913753}
   m_Layer: 5
   m_Name: Counter
   m_TagString: Untagged
@@ -616,18 +617,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1265913750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265913748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ef2c30a54fc6a48ac33b16269ad6ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1265913751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,6 +714,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265913748}
   m_CullTransparentMesh: 1
+--- !u!114 &1265913753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265913748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54eb3a4c7c03fcc4f9d9ab3f438541cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputReader: {fileID: 1655666883}
+--- !u!114 &1265913754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265913748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23e06a52065a964ba99069dccd34257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655666879
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +750,7 @@ GameObject:
   - component: {fileID: 1655666882}
   - component: {fileID: 1655666881}
   - component: {fileID: 1655666880}
+  - component: {fileID: 1655666883}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -793,6 +808,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655666883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655666879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a7b2cc7b333d34c857c0bee57ef48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732372630
 GameObject:
   m_ObjectHideFlags: 0
