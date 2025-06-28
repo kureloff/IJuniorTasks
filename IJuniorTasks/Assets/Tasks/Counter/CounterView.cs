@@ -16,12 +16,12 @@ public class CounterView : MonoBehaviour
 
     private void OnEnable()
     {
-        _counterModel.OnCountChanged += ChangeValue;
+        _counterModel.ÑountChanged += ChangeValue;
     }
 
     private void OnDisable()
     {
-        _counterModel.OnCountChanged -= ChangeValue;
+        _counterModel.ÑountChanged -= ChangeValue;
     }
 
     private void ChangeValue(int count)

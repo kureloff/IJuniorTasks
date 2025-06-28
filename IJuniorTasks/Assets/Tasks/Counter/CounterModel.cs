@@ -4,50 +4,52 @@ using UnityEngine;
 
 public class CounterModel : MonoBehaviour
 {
-    public event Action<int> OnCountChanged;
-
     [SerializeField] private InputReader _inputReader;
 
     private int _count;
-    private bool _isBeginCount;
+    private Coroutine _countingCoroutine;
+
+    public event Action<int> ÑountChanged;
 
     private void Awake()
     {
         _count = 0;
-        _isBeginCount = false;
     }
 
     private void OnEnable()
     {
-        _inputReader.OnClick += ToggleCounter;
+        _inputReader.Clicked += ToggleCounter;
     }
 
     private void OnDisable()
     {
-        _inputReader.OnClick -= ToggleCounter;
+        _inputReader.Clicked -= ToggleCounter;
     }
 
     private void ToggleCounter()
     {
-        if(_isBeginCount == false)
+        if (_countingCoroutine == null)
         {
-            _isBeginCount = true;
-            StartCoroutine(BeginCount());
+            _countingCoroutine = StartCoroutine(BeginCount());
         }
         else
         {
-            _isBeginCount = false;
-            StopCoroutine(BeginCount());
+            StopCoroutine(_countingCoroutine);
+            _countingCoroutine = null;
         }
     }
 
     private IEnumerator BeginCount()
     {
-        while (_isBeginCount)
+        float waitSeconds = 0.5f;
+        WaitForSeconds waitForSeconds = new WaitForSeconds(waitSeconds);
+        bool isBeginCount = true;
+
+        while (isBeginCount)
         {
             _count++;
-            OnCountChanged?.Invoke(_count);
-            yield return new WaitForSeconds(0.5f);
+            ÑountChanged?.Invoke(_count);
+            yield return waitForSeconds;
         }
     }
 }
