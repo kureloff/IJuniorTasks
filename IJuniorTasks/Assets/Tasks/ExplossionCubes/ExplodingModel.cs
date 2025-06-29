@@ -3,46 +3,36 @@ using UnityEngine;
 
 namespace Tasks.ExplossionCubes
 {
-    [RequireComponent(typeof(SpawnerFragments))]
-    [RequireComponent(typeof(Rigidbody))]
-    public class Cube : MonoBehaviour, IExploding
+    public class ExplodingModel : MonoBehaviour
     {
-        private SpawnerFragments _spawner;
+        private ExplodingView _explodingView;
 
         private float _explosionRadius;
         private float _explosionForce;
 
-        private float _splitChance = 100.0f;
-        private float _splitChanceDivision;
-        private int _minCountSpawn;
-        private int _maxCountSpawn;
-
-        public float SplitChance => _splitChance;
-
         private void Awake()
         {
-            _spawner = GetComponent<SpawnerFragments>();
-            _splitChanceDivision = 2f;
+            _explodingView = GetComponent<ExplodingView>();
             _explosionForce = 700.0f;
             _explosionRadius = 10.0f;
-            _minCountSpawn = 2;
-            _maxCountSpawn = 6;
         }
 
-        public void SetSplitChance(float chance) =>
-            _splitChance = chance / _splitChanceDivision;
+        private void OnEnable()
+        {
+            _explodingView.Exploded += Explode;
+        }
 
-        public void ExplodeSelf()
+        private void OnDisable()
+        {
+            _explodingView.Exploded += Explode;
+        }
+
+        private void Explode()
         {
             foreach (Rigidbody rigidbody in GetEnvieronmentObjects())
             {
                 rigidbody.AddExplosionForce(_explosionForce, transform.position, _explosionRadius);
             }
-
-            if (Random.Range(0, 100) <= _splitChance)
-                _spawner.Spawn(this, 2, 6);
-
-            Destroy(transform.gameObject);
         }
 
         private List<Rigidbody> GetEnvieronmentObjects()

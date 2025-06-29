@@ -1,4 +1,7 @@
-public interface IExploding
+namespace Tasks.ExplossionCubes
 {
-    void ExplodeSelf();
+    public interface IExploding
+    {
+        void ExplodeSelf();
+    }
 }

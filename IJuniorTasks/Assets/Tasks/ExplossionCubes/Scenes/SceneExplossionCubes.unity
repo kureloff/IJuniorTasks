@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 591918039}
   - component: {fileID: 591918038}
   - component: {fileID: 591918044}
+  - component: {fileID: 591918045}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -653,6 +654,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _splitChance: 100
+--- !u!114 &591918045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591918036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &606579262
@@ -909,6 +923,7 @@ GameObject:
   - component: {fileID: 1606693566}
   - component: {fileID: 1606693565}
   - component: {fileID: 1606693571}
+  - component: {fileID: 1606693572}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1053,6 +1068,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _splitChance: 100
+--- !u!114 &1606693572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606693563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1952944966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1147,7 @@ GameObject:
   - component: {fileID: 2017184788}
   - component: {fileID: 2017184787}
   - component: {fileID: 2017184786}
+  - component: {fileID: 2017184793}
   - component: {fileID: 2017184791}
   - component: {fileID: 2017184792}
   m_Layer: 0
@@ -1263,6 +1292,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _splitChance: 100
+--- !u!114 &2017184793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017184785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
