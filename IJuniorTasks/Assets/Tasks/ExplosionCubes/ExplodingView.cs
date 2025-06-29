@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Tasks.ExplossionCubes
+namespace Tasks.ExplosionCubes
 {
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(SpawnerFragments))]

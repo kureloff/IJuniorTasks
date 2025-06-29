@@ -1,4 +1,4 @@
-namespace Tasks.ExplossionCubes
+namespace Tasks.ExplosionCubes
 {
     public interface IExploding
     {

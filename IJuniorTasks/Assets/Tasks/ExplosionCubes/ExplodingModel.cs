@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Tasks.ExplossionCubes
+namespace Tasks.ExplosionCubes
 {
     public class ExplodingModel : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Tasks.ExplossionCubes
+namespace Tasks.ExplosionCubes
 {
     public class InputReader : MonoBehaviour
     {
