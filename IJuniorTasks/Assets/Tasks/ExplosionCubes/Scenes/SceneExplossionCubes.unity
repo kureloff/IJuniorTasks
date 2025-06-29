@@ -508,10 +508,9 @@ GameObject:
   - component: {fileID: 591918042}
   - component: {fileID: 591918041}
   - component: {fileID: 591918040}
-  - component: {fileID: 591918039}
   - component: {fileID: 591918038}
-  - component: {fileID: 591918044}
   - component: {fileID: 591918045}
+  - component: {fileID: 591918044}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -546,18 +545,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &591918039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591918036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d76991dcd271a7418fb0265c62b4650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &591918040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -653,7 +640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 591918036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
+  m_Script: {fileID: 11500000, guid: 87665721a1c8f1545941c496069b3c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _splitChance: 100
@@ -666,7 +653,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 591918036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &606579262
@@ -858,6 +845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputReader: {fileID: 545133935}
+  _originalExplosionForce: 100
+  _originalExplosionRadius: 10
 --- !u!4 &1253126082
 Transform:
   m_ObjectHideFlags: 0
@@ -920,10 +909,9 @@ GameObject:
   - component: {fileID: 1606693569}
   - component: {fileID: 1606693568}
   - component: {fileID: 1606693567}
-  - component: {fileID: 1606693566}
   - component: {fileID: 1606693565}
-  - component: {fileID: 1606693571}
   - component: {fileID: 1606693572}
+  - component: {fileID: 1606693571}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -958,18 +946,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1606693566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606693563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d76991dcd271a7418fb0265c62b4650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1606693567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1065,7 +1041,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606693563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
+  m_Script: {fileID: 11500000, guid: 87665721a1c8f1545941c496069b3c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _splitChance: 100
@@ -1078,7 +1054,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1606693563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1952944966
@@ -1146,9 +1122,8 @@ GameObject:
   - component: {fileID: 2017184789}
   - component: {fileID: 2017184788}
   - component: {fileID: 2017184787}
-  - component: {fileID: 2017184786}
-  - component: {fileID: 2017184793}
   - component: {fileID: 2017184791}
+  - component: {fileID: 2017184793}
   - component: {fileID: 2017184792}
   m_Layer: 0
   m_Name: Cube
@@ -1157,18 +1132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2017184786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017184785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d76991dcd271a7418fb0265c62b4650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2017184787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1291,7 +1254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2017184785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
+  m_Script: {fileID: 11500000, guid: 87665721a1c8f1545941c496069b3c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _splitChance: 100
@@ -1304,7 +1267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2017184785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7854b6576d16724d876ae6a88c4d2d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f177b813e3da5a4bb90508c0ae4f37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
