@@ -2,54 +2,57 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class CounterModel : MonoBehaviour
+namespace Tasks.Counter
 {
-    [SerializeField] private InputReader _inputReader;
-
-    private int _count;
-    private Coroutine _countingCoroutine;
-
-    public event Action<int> ÑountChanged;
-
-    private void Awake()
+    public class CounterModel : MonoBehaviour
     {
-        _count = 0;
-    }
+        [SerializeField] private InputReader _inputReader;
 
-    private void OnEnable()
-    {
-        _inputReader.Clicked += ToggleCounter;
-    }
+        private int _count;
+        private Coroutine _countingCoroutine;
 
-    private void OnDisable()
-    {
-        _inputReader.Clicked -= ToggleCounter;
-    }
+        public event Action<int> ÑountChanged;
 
-    private void ToggleCounter()
-    {
-        if (_countingCoroutine == null)
+        private void Awake()
         {
-            _countingCoroutine = StartCoroutine(BeginCount());
+            _count = 0;
         }
-        else
+
+        private void OnEnable()
         {
-            StopCoroutine(_countingCoroutine);
-            _countingCoroutine = null;
+            _inputReader.Clicked += ToggleCounter;
         }
-    }
 
-    private IEnumerator BeginCount()
-    {
-        float waitSeconds = 0.5f;
-        WaitForSeconds waitForSeconds = new WaitForSeconds(waitSeconds);
-        bool isBeginCount = true;
-
-        while (isBeginCount)
+        private void OnDisable()
         {
-            _count++;
-            ÑountChanged?.Invoke(_count);
-            yield return waitForSeconds;
+            _inputReader.Clicked -= ToggleCounter;
+        }
+
+        private void ToggleCounter()
+        {
+            if (_countingCoroutine == null)
+            {
+                _countingCoroutine = StartCoroutine(BeginCount());
+            }
+            else
+            {
+                StopCoroutine(_countingCoroutine);
+                _countingCoroutine = null;
+            }
+        }
+
+        private IEnumerator BeginCount()
+        {
+            float waitSeconds = 0.5f;
+            WaitForSeconds waitForSeconds = new WaitForSeconds(waitSeconds);
+            bool isBeginCount = true;
+
+            while (isBeginCount)
+            {
+                _count++;
+                ÑountChanged?.Invoke(_count);
+                yield return waitForSeconds;
+            }
         }
     }
 }

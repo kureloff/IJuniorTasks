@@ -1,15 +1,18 @@
 using System;
 using UnityEngine;
 
-public class InputReader : MonoBehaviour
+namespace Tasks.Counter
 {
-    public event Action Clicked;
-
-    private void Update()
+    public class InputReader : MonoBehaviour
     {
-        if (Input.GetMouseButtonDown(0))
+        public event Action Clicked;
+
+        private void Update()
         {
-            Clicked?.Invoke();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Clicked?.Invoke();
+            }
         }
     }
 }
